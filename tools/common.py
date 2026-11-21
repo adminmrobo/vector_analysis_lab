@@ -225,9 +225,13 @@ def sl(id_, label, mn, mx, st, v):
     return (f'<div class="sl"><label for="{id_}">{label}</label><input type="range" id="{id_}" min="{mn}" max="{mx}" step="{st}" value="{v}">'
             f'<output id="{id_}o"></output></div>')
 
-def three(items, note):
+def three(items, note, gloss=None):
     li = ''.join(f'<li><b>{a}:</b> {b}</li>' for a, b in items)
-    return f'<div class="three"><h2>처음 오신 분께 — 이 페이지를 3줄로</h2><ol>{li}</ol><p style="margin:0">{note}</p></div>'
+    g = ''
+    if gloss:
+        rows = ''.join(f'<tr><td class="m">{a}</td><td>{b}</td></tr>' for a, b in gloss)
+        g = f'<details><summary>이 페이지에 나오는 기호와 약어 풀이</summary><table><tbody>{rows}</tbody></table></details>'
+    return f'<div class="three"><h2>처음 오신 분께 — 이 페이지를 3줄로</h2><ol>{li}</ol><p style="margin:0">{note}</p>{g}</div>'
 
 def tail_sections(kg_links, foot):
     kg = ''.join(f'<a href="#{h}">{t}</a>' for h, t in kg_links)

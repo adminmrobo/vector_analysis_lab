@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """1부 복습 대시보드 — 생활 장면 시뮬레이터 (탭 4개, 미션 12개)"""
 from common import *
+HINTS = {'pizzam1': '테두리 = 반지름 × 각도. 큰 판 15 cm면 45° × 10 ÷ 15 = 30°.', 'pizzam2': '넓이는 반지름의 제곱에 비례합니다. 45° × (10 ÷ 15)² = 20°.', 'pizzam3': '연말과 연초가 만나는 쌍(예: 12월과 1월)을 고르세요.', 'globem1': 'cos(위도) = 0.5가 되는 위도를 찾으세요.', 'globem2': '서울 단추를 누르고, 운행 거리를 경도 1도 길이(약 88 km)에 맞추세요.', 'globem3': '1 ÷ cos²(위도) ≥ 10 → 위도 약 72° 이상.', 'flowm1': 'A역 탄 사람을 내린 사람보다 많게 하세요.', 'flowm2': '출근 시간엔 B −900, C +100이라 A가 +800이어야 합니다(예: 내림 1,200, 탐 400).', 'flowm3': '"다음 날 환율"을 누르고 100엔 = 1,450 ÷ 155 × 100 ≈ 935.5원.', 'photom1': '가장 약한 테두리의 차이가 22.5라, 기준값을 1~22 사이로 두세요.', 'photom2': '잡음 20에서 기준값을 30 이상으로 올려 보세요.', 'photom3': '잡음 10에서 기준값 15~27 사이를 찾아보세요.', 'cyclem1': '분기를 움직여 점이 왼쪽 위(회복)에 오는 때를 찾으세요. 한 바퀴 12분기면 9분기 근처입니다.', 'cyclem2': '경기의 크기를 0.5로 줄이고 분기 3 근처를 보세요.', 'cyclem3': '실제 이동 = 크기 × 0.524 ≥ 1 → 크기 1.9 이상.', 'fxm1': '한 바퀴 비율 1.0179를 덮는 수수료는 약 0.59%입니다.', 'fxm2': '"다음 날"을 누르고 수수료 0, 100엔 ≈ 935.5원.', 'fxm3': '수수료 0.30%에서는 100엔 ≈ 942원 근처입니다.', 'fundm1': '불황 기본값을 누른 뒤 정부 슬라이더를 + 쪽으로 미세요.', 'fundm2': '가계 + 기업 + 정부 = 0이 되게 하세요(예: +120, −130, +10).', 'fundm3': '가계를 −로 두고, 기업·정부를 조절해 해외가 ±30 안에 들게 하세요.', 'townm1': '"한 단계 섞기"를 7~8번 눌러 보세요.', 'townm2': '각도 90°면 cos 90° = 0입니다.', 'townm3': '자산1·2를 90°로, 상관 1–3을 0으로 두면 2–3 상관은 어떤 값도 됩니다.', 'salesm1': '"시계 특성" 단추를 누르세요.', 'salesm2': '숫자 특성에서 그림 ②의 가장 긴 막대가 있는 달(대개 12월)을 고르세요.', 'salesm3': '가장 잘 팔리는 달을 12로, 특성은 시계 특성으로.', 'wordsm1': 'B 길이를 8 이상, 각도를 약 16°로 두세요(cos 16° ≈ 0.96).', 'wordsm2': '각도를 90°로 두세요.', 'wordsm3': '두 단어 자리 차이를 3으로(예: 0번과 3번).', 'stepsm1': '감쇠 끔, 학습률 1, 처음 길이 5 이하. 한 걸음 각도 = 1 ÷ r².', 'stepsm2': '길이 10이면 한 걸음 0.01 × 학습률. 학습률 4면 약 20걸음.', 'stepsm3': '길이 10, 학습률 1에서 "감쇠 켬"을 누르세요.', 'probm1': '1축에서 늘림 2배.', 'probm2': '2축에서 늘림 2배(넓이 4배).', 'probm3': '"한 번 섞기"를 10번 넘게 눌러 보세요.'}
 
 TABS = [('pizza', '피자 가게·달력', '방 1·2'), ('globe', '지구 배송센터', '방 3·4'),
         ('flow', '역과 환전소', '방 5·6'), ('photo', '사진 윤곽선', '방 7')]
@@ -10,7 +11,7 @@ def sl2(i, l, mn, mx, st, v):
             f'<output id="{i}o"></output></div>')
 
 def scene(key, situ, env, me, cap1, cap2, missions, links):
-    m = ''.join(f'<li id="{key}m{i+1}">{t}</li>' for i, t in enumerate(missions))
+    m = ''.join(f'<li id="{key}m{i+1}">{t}<details style="margin-top:4px"><summary style="font-size:13px">힌트</summary><span style="font-size:14px">{HINTS.get(f"{key}m{i+1}", "")}</span></details></li>' for i, t in enumerate(missions))
     return f"""
 <div class="ctab" id="tab-{key}" role="tabpanel" aria-labelledby="tb-{key}">
 <div class="easy"><b>상황</b> {situ}</div>
@@ -47,6 +48,7 @@ def body():
 <section>
 {talk(T('asst/E20', '복습은 제가 진행해요… 성적표 숫자는 제가 읽고, 계산은 주판봇이, 함정은 초파리 연구원이 알려 줄 거예요.'))}
 {crowd('방청석', [('x1/E15', '<span id="xs1">(조마조마)</span>'), ('x2/E02', '<span id="xs2">(꿀꺽)</span>'), ('x3/E04', '<span id="xs3">(…!)</span>')])}
+<details style="margin:10px 0"><summary>이 대시보드의 기호와 약어 풀이</summary><table><tbody><tr><td class="m">h</td><td>한 걸음의 실제 길이</td></tr><tr><td class="m">cos</td><td>코사인. 시계판·위도 계산에 쓰는 삼각함수</td></tr><tr><td class="m">발산</td><td>나가는 양 − 들어오는 양</td></tr><tr><td class="m">회전</td><td>한 바퀴 돌아 남는 것</td></tr><tr><td class="m">라플라시안</td><td>주변 평균과 나의 차이</td></tr></tbody></table></details>
 <div class="tabs" role="tablist" aria-label="현장 고르기">{tabs}</div>
 <p id="allSum" style="font-weight:700" aria-live="polite"></p>
 """

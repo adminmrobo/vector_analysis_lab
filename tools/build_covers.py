@@ -69,7 +69,12 @@ def cast(im, items, y_bottom, x0=250, x1=1500):
         im.paste(s, (int(x), int(y_bottom - s.height)), s)
         x += s.width + gap
 
+def pixelate(im, f=4, colors=40):
+    small = im.resize((W // f, H // f), Image.BOX).quantize(colors=colors, method=Image.Quantize.MEDIANCUT).convert('RGB')
+    return small.resize((W, H), Image.NEAREST)
+
 def save(im, name):
+    im = pixelate(im)
     im.save(ROOT / 'assets' / f'{name}.webp', 'WEBP', quality=86)
     if name == 'cover_index':
         im.resize((1200, 630), Image.LANCZOS).save(ROOT / 'assets/og/index.webp', 'WEBP', quality=82)

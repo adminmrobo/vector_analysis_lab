@@ -24,6 +24,7 @@ def body():
 <li><b>확인:</b> 비교표에서 세 자의 결과가 소수 넷째 자리까지 같은지 봅니다. 모든 계산은 원자료 카드 4/4의 일반 식으로 했습니다.</li></ol></div>
 {talk(T('asst/E20', '오늘은 복습 시간이에요. 제가 숫자를 읽어 드릴게요… 틀리면 꼭 말해 주세요!'))}
 {crowd('방청석', [('x1/E15', '(조마조마)'), ('x2/E02', '(꿀꺽)'), ('x3/E04', '(…!)')])}
+<details style="margin:10px 0"><summary>이 대시보드의 기호와 약어 풀이</summary><table><tbody><tr><td class="m">∇f</td><td>기울기. 함수 f가 가장 가파르게 오르는 쪽 화살표</td></tr><tr><td class="m">∇·A</td><td>발산. 화살표 밭 A가 그 자리에서 솟아나는 양</td></tr><tr><td class="m">∇×A</td><td>회전. 그 자리에서 도는 양</td></tr><tr><td class="m">∇²f</td><td>라플라시안. 주변 평균과 나의 차이</td></tr><tr><td class="m">h, h₁h₂h₃</td><td>한 걸음의 실제 길이와 그 곱(작은 상자 배율)</td></tr><tr><td class="m">dV</td><td>작은 상자의 실제 부피</td></tr></tbody></table></details>
 </section>
 
 <section id="board">
@@ -55,9 +56,9 @@ def body():
 <section id="missions">
 <h2>미션 3개 — 0편 복습</h2>
 <ol class="missions">
-<li id="m1"><b>미션 ① 한 걸음 h = 2:</b> 원통 자에서 φ 쪽 한 걸음의 실제 길이(h)가 2가 되는 점을 찾으세요. <span style="color:var(--mute)">(허용 오차 ±0.05, 0편 방 A)</span></li>
-<li id="m2"><b>미션 ② 같은 ∇:</b> 함수를 f = 1/r로 고르고 세 자를 모두 눌러, 라플라시안이 세 자 모두 같은 값(0)인지 확인하세요. <span style="color:var(--mute)">(0편 방 A 풀이)</span></li>
-<li id="m3"><b>미션 ③ 납작한 상자:</b> 지구본 자에서 작은 상자 부피(눈금 0.1씩)가 0.0002보다 작아지는 곳을 찾으세요. 중심에서 거리 r은 0.5 이상. <span style="color:var(--mute)">(0편 방 B)</span></li>
+<li id="m1"><b>미션 ① 한 걸음 h = 2:</b> 원통 자에서 φ 쪽 한 걸음의 실제 길이(h)가 2가 되는 점을 찾으세요. <span style="color:var(--mute)">(허용 오차 ±0.05, 0편 방 A)</span><details style="margin-top:4px"><summary style="font-size:13px">힌트</summary><span style="font-size:14px">원통 자를 누르고 점을 높이 축에서 2만큼 떨어진 곳(예: x = 2, y = 0)으로 옮기세요. φ 쪽 h = ρ입니다.</span></details></li>
+<li id="m2"><b>미션 ② 같은 ∇:</b> 함수를 f = 1/r로 고르고 세 자를 모두 눌러, 라플라시안이 세 자 모두 같은 값(0)인지 확인하세요. <span style="color:var(--mute)">(0편 방 A 풀이)</span><details style="margin-top:4px"><summary style="font-size:13px">힌트</summary><span style="font-size:14px">함수에서 f = 1/r을 고른 뒤 세 자 단추를 한 번씩 누르세요.</span></details></li>
+<li id="m3"><b>미션 ③ 납작한 상자:</b> 지구본 자에서 작은 상자 부피(눈금 0.1씩)가 0.0002보다 작아지는 곳을 찾으세요. 중심에서 거리 r은 0.5 이상. <span style="color:var(--mute)">(0편 방 B)</span><details style="margin-top:4px"><summary style="font-size:13px">힌트</summary><span style="font-size:14px">지구본 자에서 x·y를 0 가까이, z를 1 이상으로. sinθ가 0에 가까워집니다.</span></details></li>
 </ol>
 <p id="mSum" style="font-weight:700" aria-live="polite"></p>
 <div class="limit"><b>이 대시보드의 한계</b> 미분은 아주 작은 간격으로 나눠 어림한 값입니다(소수 넷째 자리까지 맞음). 원점(r = 0)이나 높이 축 위(ρ = 0)에서는 각도 쪽 방향이 없어 원통·지구본 자의 식을 쓸 수 없습니다. 숫자는 모두 교육용 예시입니다.</div>

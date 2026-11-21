@@ -19,6 +19,7 @@ def body():
 <main class="wrap"><section>
 {talk(T('asst/E15', '경제 상황실은 처음이에요… 성적표는 제가 읽을게요. 이상하면 바로 알려 주세요!'))}
 {crowd('방청석', [('x1/E15', '<span id="xs1">(조마조마)</span>'), ('x2/E02', '<span id="xs2">(꿀꺽)</span>'), ('x3/E04', '<span id="xs3">(…!)</span>')])}
+<details style="margin:10px 0"><summary>이 대시보드의 기호와 약어 풀이</summary><table><tbody><tr><td class="m">반지름·각도</td><td>경기의 크기·국면</td></tr><tr><td class="m">로그 합</td><td>한 바퀴 비율을 덧셈으로 바꾼 값. 0이면 회전 0</td></tr><tr><td class="m">α</td><td>섞는 비율(속도)</td></tr><tr><td class="m">확인 값</td><td>세 상관이 함께 말이 되는지(0 이상이면 됨)</td></tr></tbody></table></details>
 <div class="tabs" role="tablist" aria-label="현장 고르기">{tabs}</div>
 <p id="allSum" style="font-weight:700" aria-live="polite"></p>
 """

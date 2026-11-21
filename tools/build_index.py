@@ -46,6 +46,23 @@ def body():
 <a class="p3" href="dash_03.html"><b class="n">3부 복습 대시보드</b>AI 실험실<br><span style="font-size:14px;color:var(--mute)">판매 예측 · 단어 나침반 · 학습 걸음 · 확률과 관계망 · 미션 12개</span></a></div>
 </div>
 </section>
+<section id="howto">
+<h2>읽는 길과 수업에서 쓰기</h2>
+<div class="pair">
+<div class="box why"><h3>빠른 길 (약 40분)</h3><ol>
+<li><a href="00_orientation.html#room-a">0편 방 A 네 개의 자</a> — 한 걸음 h만 잡기</li>
+<li><a href="01_everyday.html#room-1">1부 방 1 피자</a> · <a href="01_everyday.html#room-5">방 5 지하철역</a> · <a href="01_everyday.html#room-6">방 6 환전</a></li>
+<li><a href="02_economy.html#room-9">2부 방 9 차익거래</a> — 회전이 시장에서</li>
+<li><a href="03_ai_ml.html#room-13">3부 방 13 달력 특성</a> · <a href="03_ai_ml.html#room-14">방 14 임베딩</a> · <a href="03_ai_ml.html#duel">대결</a></li>
+</ol><p style="margin:0">심화(방 12·16·17)는 건너뛰어도 됩니다.</p></div>
+<div class="box math"><h3>수업 배치 예 (90분 × 4차시)</h3><ol>
+<li><b>1차시:</b> 0편 본문 + <a href="dash_00.html">0편 대시보드</a> 미션 3개</li>
+<li><b>2차시:</b> 1부 방 1~7 + <a href="dash_01.html">1부 대시보드</a> 현장 2곳(나머지는 과제)</li>
+<li><b>3차시:</b> 2부 방 8~11(방 12는 자습) + <a href="dash_02.html">2부 대시보드</a></li>
+<li><b>4차시:</b> 3부 방 13~18 + 대결 + <a href="dash_03.html">3부 대시보드</a></li>
+</ol><p style="margin:0">미션 통과 표시는 저장되지 않습니다. 화면 갈무리로 제출받으세요.</p></div>
+</div>
+</section>
 <section>
 <h2>등장인물</h2>
 {c}

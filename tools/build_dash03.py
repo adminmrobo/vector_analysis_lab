@@ -20,6 +20,7 @@ def body():
 <main class="wrap"><section>
 {talk(T('asst/E19', '마지막 복습이에요. 이번엔 떨지 않고 성적표를 읽어 볼게요!'))}
 {crowd('방청석', [('x1/E15', '<span id="xs1">(조마조마)</span>'), ('x2/E02', '<span id="xs2">(꿀꺽)</span>'), ('x3/E04', '<span id="xs3">(…!)</span>')])}
+<details style="margin:10px 0"><summary>이 대시보드의 기호와 약어 풀이</summary><table><tbody><tr><td class="m">RMSE</td><td>빗나간 값을 제곱해 평균 낸 뒤 제곱근</td></tr><tr><td class="m">코사인</td><td>두 화살표 방향이 같은 정도(−1~1)</td></tr><tr><td class="m">RoPE</td><td>자리만큼 화살표를 돌려 위치를 넣는 방법</td></tr><tr><td class="m">rad</td><td>라디안. 180° = 3.14</td></tr><tr><td class="m">밀도</td><td>그 자리의 확률 높이</td></tr><tr><td class="m">GNN</td><td>관계망에서 이웃 값을 섞는 신경망</td></tr></tbody></table></details>
 <div class="tabs" role="tablist" aria-label="실험 고르기">{tabs}</div>
 <p id="allSum" style="font-weight:700" aria-live="polite"></p>
 """
