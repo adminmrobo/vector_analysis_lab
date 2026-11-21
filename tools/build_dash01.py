@@ -92,7 +92,7 @@ def body():
 <div class="limit" style="margin-top:24px"><b>이 대시보드의 한계</b> 모든 숫자는 교육용 예시입니다. 지구는 반지름 6,371 km 공으로, 1°×1° 땅은 작은 네모로 어림했습니다. 환율은 가상 값이며 수수료를 빼고 계산했습니다. 투자·경영 권고가 아닙니다.</div>
 </section>
 <section id="outro">
-<div class="nextp"><a href="01_everyday.html"><b>← 1부 본문</b>같은 1도, 다른 길이</a><a href="index.html"><b>목차</b>2부 경제·금융은 준비 중입니다</a></div>
+<div class="nextp"><a href="01_everyday.html"><b>← 1부 본문</b>같은 1도, 다른 길이</a><a href="02_economy.html"><b>다음 →</b>2부 경제·금융</a></div>
 </section>
 <section id="export"><h2>온톨로지·서지 꾸러미</h2>
 <div class="btns"><button class="btn" id="copyPack">꾸러미 복사</button><span id="copyMsg" style="align-self:center;font-size:14px;color:var(--mute)" aria-live="polite"></span></div>

@@ -111,3 +111,44 @@ cast(im, [('x1', 'e15', 140, 250), ('x2', 'e02', 155, 360), ('x3', 'e04', 100, 4
           ('fly', 'e08', 130, 1180), ('robo', 'e09', 205, 1290), ('doc', 'e07', 270, 1400)], 780)
 save(im, 'cover_01')
 print('covers ok')
+
+# 2부: 경제 — 경기시계·동전 삼각형·막대
+im, d = base()
+cx, cy, R = 400, 290, 150
+for i, c in enumerate([(230, 243, 245), (234, 246, 238), (253, 240, 230), (244, 238, 249)]):
+    d.pieslice((cx - R, cy - R, cx + R, cy + R), 180 + 90 * i, 270 + 90 * i, fill=c, outline=NAVY, width=4)
+d.line([(cx, cy), (cx + 100, cy + 100)], fill=RED, width=10)
+for i, (x, y) in enumerate([(820, 400), (960, 160), (1100, 400)]):
+    d.ellipse((x - 55, y - 55, x + 55, y + 55), fill=(255, 236, 170), outline=ORG, width=8)
+d.line([(820, 400), (960, 160), (1100, 400), (820, 400)], fill=TEAL, width=6)
+for i, hgt in enumerate([180, -140, -60, 20]):
+    x = 1240 + i * 70
+    y0 = 300
+    d.rectangle((x, min(y0, y0 - hgt), x + 50, max(y0, y0 - hgt)), fill=ORG if hgt > 0 else NAVY)
+d.line([(1220, 300), (1540, 300)], fill=(28, 34, 48), width=4)
+cast(im, [('x1', 'e15', 140, 0), ('x2', 'e09', 150, 0), ('x3', 'e04', 100, 0), ('sia', 'e19', 240, 0), ('asst', 'e15', 265, 0),
+          ('moa', 'e09', 245, 0), ('fly', 'e10', 130, 0), ('robo', 'e09', 205, 0), ('doc', 'e07', 270, 0)], 780)
+save(im, 'cover_02')
+
+# 3부: AI — 점 구름 구·관계망·시계판
+im, d = base()
+cx, cy, R = 420, 290, 170
+d.ellipse((cx - R, cy - R, cx + R, cy + R), outline=NAVY, width=8)
+for k in range(60):
+    a = k * 2.399
+    rr = R * math.sqrt((k + 0.5) / 60)
+    d.ellipse((cx + rr * math.cos(a) - 6, cy + rr * math.sin(a) - 6, cx + rr * math.cos(a) + 6, cy + rr * math.sin(a) + 6), fill=TEAL)
+nodes = [(820, 200), (950, 140), (1060, 240), (930, 330), (800, 380), (1100, 390)]
+for a, b in [(0, 1), (1, 2), (2, 3), (3, 0), (3, 4), (2, 5), (3, 5)]:
+    d.line([nodes[a], nodes[b]], fill=(154, 163, 176), width=5)
+for i, (x, y) in enumerate(nodes):
+    d.ellipse((x - 26, y - 26, x + 26, y + 26), fill=ORG if i == 3 else (255, 255, 255), outline=NAVY, width=6)
+d.ellipse((1250, 140, 1510, 400), outline=(122, 63, 214), width=8)
+for m in range(12):
+    t = math.radians(90 - m * 30)
+    d.ellipse((1380 + 115 * math.cos(t) - 9, 270 - 115 * math.sin(t) - 9, 1380 + 115 * math.cos(t) + 9, 270 - 115 * math.sin(t) + 9), fill=(122, 63, 214))
+d.line([(1380, 270), (1380, 175)], fill=RED, width=8)
+cast(im, [('x1', 'e01', 140, 0), ('x2', 'e16', 150, 0), ('x3', 'e01', 100, 0), ('moa', 'e19', 240, 0), ('asst', 'e16', 270, 0),
+          ('sia', 'e12', 245, 0), ('fly', 'e08', 130, 0), ('robo', 'e13', 205, 0), ('doc', 'e16', 270, 0)], 780)
+save(im, 'cover_03')
+print('covers 02 03 ok')

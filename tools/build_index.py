@@ -40,8 +40,10 @@ def body():
 <a class="p1" href="01_everyday.html"><b class="n">1부 생활 · 방 1~7</b>같은 1도, 다른 길이<br><span style="font-size:14px;color:var(--mute)">피자 테두리 · 12월과 1월 · 경도 1도 · 그린란드 · 지하철역(발산) · 환전 한 바퀴(회전) · 사진 윤곽선(라플라시안)</span></a>
 <a class="p0" href="dash_00.html"><b class="n">0편 복습 대시보드</b>좌표계 놀이터 — 같은 ∇, 세 가지 자<br><span style="font-size:14px;color:var(--mute)">함수·화살표 밭·자를 바꿔 기울기·발산·회전·라플라시안 비교 · 미션 3개</span></a>
 <a class="p1" href="dash_01.html"><b class="n">1부 복습 대시보드</b>생활 장면 시뮬레이터<br><span style="font-size:14px;color:var(--mute)">피자 가게·지구 배송센터·역과 환전소·사진 앱 · 미션 12개</span></a>
-<div class="soon p2"><b class="n">2부 경제·금융 · 방 8~12 (준비 중)</b>경기순환시계 · 차익거래 = 회전 · 자금순환의 샘과 배수구 · 집값 확산 · 상관을 각도로</div>
-<div class="soon p3"><b class="n">3부 AI·머신러닝 · 방 13~18 + 대결 (준비 중)</b>달력 시계 특성 · 임베딩은 구 위의 점 · 위치를 각도로(RoPE) · 가중치 길이와 걸음 · 늘리면 묽어진다 · 이웃 평균으로 다듬기</div>
+<a class="p2" href="02_economy.html"><b class="n">2부 경제·금융 · 방 8~12</b>1부에서 본 장면이 시장에서<br><span style="font-size:14px;color:var(--mute)">경기순환시계 · 차익거래 = 회전 · 자금순환의 샘과 배수구 · 집값 확산 · 상관을 각도로</span></a>
+<a class="p2" href="dash_02.html"><b class="n">2부 복습 대시보드</b>경제 상황실<br><span style="font-size:14px;color:var(--mute)">경기 상황실 · 환전 데스크 · 자금순환판 · 동네 지도와 포트폴리오 · 미션 12개</span></a>
+<a class="p3" href="03_ai_ml.html"><b class="n">3부 AI·머신러닝 · 방 13~18 + 대결</b>자를 잘 고르면 모델이 쉬워진다<br><span style="font-size:14px;color:var(--mute)">달력 시계 특성 · 임베딩 · RoPE · 가중치 길이와 걸음 · 늘리면 묽어진다 · GNN · 박사 vs 하루</span></a>
+<a class="p3" href="dash_03.html"><b class="n">3부 복습 대시보드</b>AI 실험실<br><span style="font-size:14px;color:var(--mute)">판매 예측 · 단어 나침반 · 학습 걸음 · 확률과 관계망 · 미션 12개</span></a></div>
 </div>
 </section>
 <section>
@@ -56,7 +58,7 @@ def body():
 <tr><td>한 걸음의 실제 길이 h</td><td>피자 테두리 · 경도 1도</td><td>경기순환시계 · 상관을 각도로</td><td>달력 시계 특성 · 가중치 길이와 걸음</td></tr>
 <tr><td>작은 상자 dV</td><td>그린란드</td><td>—</td><td>늘리면 묽어진다</td></tr>
 <tr><td>발산</td><td>지하철역</td><td>자금순환</td><td>—</td></tr>
-<tr><td>회전</td><td>환전 한 바퀴</td><td>차익거래</td><td>(∇ 특별편 GAN 방 안내)</td></tr>
+<tr><td>회전</td><td>환전 한 바퀴</td><td>차익거래</td><td>위치를 각도로(RoPE)</td></tr>
 <tr><td>라플라시안</td><td>사진 윤곽선</td><td>집값 확산</td><td>이웃 평균으로 다듬기(GNN)</td></tr>
 </tbody></table></div>
 <p style="margin-top:14px">함께 보면 좋은 곳: <a href="https://adminmrobo.github.io/vector_calculus_lab/">∇ 특별편</a> · <a href="https://adminmrobo.github.io/nabla_field_lab/">같은 ∇, 다른 현장</a> · <a href="https://adminmrobo.github.io/optimization_3d_map/">좌표축 위의 그릇</a></p>
@@ -75,7 +77,7 @@ def body():
 
 PACK_DATA = {"series": "벡터 분석 랩 — 네 개의 자로 읽는 화살표", "author": "안상선 ((주)M-Robo)",
              "url": "https://adminmrobo.github.io/vector_analysis_lab/",
-             "parts": ["00_orientation.html", "01_everyday.html", "02_economy.html (준비 중)", "03_ai_ml.html (준비 중)"],
+             "parts": ["00_orientation.html", "dash_00.html", "01_everyday.html", "dash_01.html", "02_economy.html", "dash_02.html", "03_ai_ml.html", "dash_03.html"],
              "source": "@eeanimation, Vector Analysis infographic 1/4–4/4",
              "cite": "안상선 (2026). 벡터 분석 랩 — 네 개의 자로 읽는 화살표. https://adminmrobo.github.io/vector_analysis_lab/"}
 

@@ -129,7 +129,9 @@ def codebox(lines):
             f'{r}</tbody></table></div></details>')
 
 NAV = [('index.html', '목차'), ('00_orientation.html', '0편 네 개의 자'), ('dash_00.html', '0편 대시보드'),
-       ('01_everyday.html', '1부 생활'), ('dash_01.html', '1부 대시보드')]
+       ('01_everyday.html', '1부 생활'), ('dash_01.html', '1부 대시보드'),
+       ('02_economy.html', '2부 경제·금융'), ('dash_02.html', '2부 대시보드'),
+       ('03_ai_ml.html', '3부 AI·머신러닝'), ('dash_03.html', '3부 대시보드')]
 
 def nav(cur):
     a = '<a class="home" href="index.html">벡터 분석 랩</a>'
@@ -194,3 +196,46 @@ const PACK={json.dumps(pack, ensure_ascii=False)};
     (ROOT / fname).write_text(html, encoding='utf-8')
     USED.clear()
     return len(html.encode())
+
+
+# ---------- 본문 방 조각 (1~3부 공용) ----------
+def room_head(part, n, title, tags):
+    t = ''.join(f'<span>{x}</span>' for x in tags)
+    return f'<section class="room" id="room-{n}">\n<div class="wing">{part} · 방 {n}</div>\n<h2>{title}</h2>\n<div class="tags">{t}</div>\n'
+
+def mathbox(q, words, school, tries, eq, end):
+    li = ''.join(f'<li>{x}</li>' for x in tries)
+    return (f'<div class="box math"><h3>시아·모아가 묻고, 하루가 풀어 봅니다</h3>{q}'
+            f'<p class="saywords"><b>말로 먼저:</b> {words}</p><p><b>학교 수학으로 보면:</b> {school}</p>'
+            f'<div class="try"><b>숫자로 한 번 해 보기</b><ol>{li}</ol></div>{eq}{end}</div>')
+
+def whybox(problem, prev, sol, easy):
+    return (f'<div class="box why"><h3>왜 이 방법을 쓰나</h3><p><b>문제:</b> {problem}</p><p><b>앞 방의 한계:</b> {prev}</p>'
+            f'<p><b>해법:</b> {sol}</p><div class="easy"><b>쉽게 말하면</b> {easy}</div></div>')
+
+def daily(a, b, blabel='다음 부에서는'):
+    return f'<div class="daily"><div><b>일상으로 치면</b>{a}</div><div><b>{blabel}</b>{b}</div></div>'
+
+def lab(n, title, hint, fig, ctl, minh=340, btns=''):
+    return (f'<div class="lab"><div class="hd"><b>{title}</b><span>{hint}</span></div>{btns}'
+            f'<div class="fig" style="min-height:{minh}px">{fig}</div><div class="ctl">{ctl}</div>'
+            f'<div class="read" id="r{n}read" aria-live="polite"></div></div>')
+
+def sl(id_, label, mn, mx, st, v):
+    return (f'<div class="sl"><label for="{id_}">{label}</label><input type="range" id="{id_}" min="{mn}" max="{mx}" step="{st}" value="{v}">'
+            f'<output id="{id_}o"></output></div>')
+
+def three(items, note):
+    li = ''.join(f'<li><b>{a}:</b> {b}</li>' for a, b in items)
+    return f'<div class="three"><h2>처음 오신 분께 — 이 페이지를 3줄로</h2><ol>{li}</ol><p style="margin:0">{note}</p></div>'
+
+def tail_sections(kg_links, foot):
+    kg = ''.join(f'<a href="#{h}">{t}</a>' for h, t in kg_links)
+    return f"""
+<section id="kg"><h2>지식 색인</h2><p>이 페이지의 개념과 나오는 방입니다.</p><div class="kg">{kg}</div></section>
+<section id="export"><h2>온톨로지·서지 꾸러미</h2><p>이 페이지의 개념 관계와 인용 정보입니다. 다른 도구로 옮길 때 복사해 쓰세요.</p>
+<div class="btns"><button class="btn" id="copyPack">꾸러미 복사</button><span id="copyMsg" style="align-self:center;font-size:14px;color:var(--mute)" aria-live="polite"></span></div>
+<pre id="pack"></pre></section>
+</main>
+<footer><div class="wrap">{AUTHOR}<br>{foot}</div></footer>
+"""
