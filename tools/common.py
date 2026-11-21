@@ -11,6 +11,43 @@ NAME = {'asst': '하루', 'doc': '박사', 'fly': '초파리 연구원', 'robo':
 AUTHOR = '글 · 안상선 (<a href="https://adminmrobo.github.io/who_am_i/who_am_i.html">https://adminmrobo.github.io/who_am_i/who_am_i.html</a>) · (주)M-Robo'
 
 EXTRA_CSS = r"""
+.dash{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:16px;margin:16px 0}
+@media(max-width:860px){.dash{grid-template-columns:minmax(0,1fr)}}
+.panel{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff}
+.panel h3{margin:0 0 8px;font-size:16px}
+.grp{border-radius:12px;padding:10px 12px;margin:8px 0}
+.grp.env{background:#eef8f0;border:1px solid #bfe3c8}.grp.env>b{color:#1e8a4c}
+.grp.me{background:#eef2fb;border:1px solid #c5d0ea}.grp.me>b{color:#24345c}
+.grp>b{display:block;font-size:13px;margin-bottom:4px}
+.grp .sl{grid-template-columns:5.6em minmax(0,1fr) 3.8em}
+.grp .btn{min-height:40px;padding:0 12px;font-size:14px}
+.score{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:10px 0}
+@media(max-width:860px){.score{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.score div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;min-width:0}
+.score div span{display:block;font-size:12.5px;color:var(--mute)}
+.score div b{display:block;font-size:19px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.score div small{font-size:12.5px}
+.score .ok{border-color:#9fd4b2;background:#f1faf4}.score .warn{border-color:#f1c27d;background:#fff8ec}
+.figs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+@media(max-width:860px){.figs{grid-template-columns:minmax(0,1fr)}}
+.figs .fig{min-height:320px}
+.figs .cap{font-size:13px;color:var(--mute);margin:4px 2px 0}
+.missions{display:grid;gap:8px;margin:12px 0;padding:0;list-style:none}
+.missions li{border:1px solid var(--line);border-radius:12px;padding:10px 12px 10px 44px;position:relative;line-height:1.6}
+.missions li::before{content:"";position:absolute;left:12px;top:12px;width:20px;height:20px;border-radius:6px;border:2px solid #9aa3b0}
+.missions li.done{border-color:#9fd4b2;background:#f1faf4}
+.missions li.done::before{background:#1e8a4c;border-color:#1e8a4c}
+.missions li.done::after{content:"✓";position:absolute;left:16px;top:9px;color:#fff;font-weight:900}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.tabs .btn[aria-selected=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ctab[hidden]{display:none}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+table.cmp th,table.cmp td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right;white-space:nowrap}
+table.cmp th:first-child,table.cmp td:first-child{text-align:left}
+table.cmp tr.cur td{background:#eef2fb;font-weight:700}
+.dashlink{display:block;border:2px solid var(--teal);border-radius:16px;padding:14px 18px;margin:20px 0;text-decoration:none;color:var(--ink);background:#f3fafb}
+.dashlink b{color:var(--teal)}
+
 nav.top{position:sticky;top:0;z-index:20;height:54px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap;padding:0 max(4vw,16px);background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);font-size:14px}
 nav.top a{text-decoration:none;color:var(--ink)}nav.top a.home{font-weight:900;color:var(--navy)}nav.top a[aria-current]{color:var(--org);font-weight:700}
 .crowd{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0;padding:8px 12px;border:1px dashed #b9c2d0;border-radius:14px;background:#fbfcfe}
@@ -91,7 +128,8 @@ def codebox(lines):
     return ('<details><summary>파이썬 코드로 보면 (몰라도 됩니다)</summary><div class="scroll"><table><tbody>'
             f'{r}</tbody></table></div></details>')
 
-NAV = [('index.html', '목차'), ('00_orientation.html', '0편 네 개의 자'), ('01_everyday.html', '1부 생활')]
+NAV = [('index.html', '목차'), ('00_orientation.html', '0편 네 개의 자'), ('dash_00.html', '0편 대시보드'),
+       ('01_everyday.html', '1부 생활'), ('dash_01.html', '1부 대시보드')]
 
 def nav(cur):
     a = '<a class="home" href="index.html">벡터 분석 랩</a>'
