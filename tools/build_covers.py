@@ -58,16 +58,23 @@ def cards(d, y0, y1, xs):
         frame(d, (x, y0, x + 250, y1), cols[i])
         icon(d, kinds[i], x + 125, (y0 + y1) / 2 + 10, 70)
 
-def cast(im, items, y_bottom, x0=250, x1=1500):
-    tot0 = sum(h for _, _, h, _ in items) + 12 * (len(items) - 1)
-    k = min(1.0, (x1 - x0) / tot0)
-    sp = [spr(who, e, int(h * k)) for who, e, h, _ in items]
-    total = sum(s.width for s in sp)
-    gap = max(12, (x1 - x0 - total) / max(1, len(sp) - 1))
-    x = x0
-    for s in sp:
-        im.paste(s, (int(x), int(y_bottom - s.height)), s)
-        x += s.width + gap
+PENDING = []
+
+def cast(im, items, y_bottom, x0=200, x1=1560):
+    """캐릭터는 픽셀화하지 않고 원래 도트 그대로(1배 192px 또는 1/2배 96px) 마지막에 얹는다."""
+    SMALL = ('x1', 'x2', 'x3', 'fly', 'robo')
+    sp = []
+    for who, e, h, _ in items:
+        img = Image.open(P192 / who / f'{who}_{e}.webp').convert('RGBA')
+        if who in SMALL:
+            img = img.resize((img.width // 2, img.height // 2), Image.NEAREST)
+        sp.append(img)
+    total = sum(t.width for t in sp)
+    gap = max(8, (x1 - x0 - total) / max(1, len(sp) - 1))
+    x = x0 + max(0, (x1 - x0 - total - gap * (len(sp) - 1)) / 2)
+    for t in sp:
+        PENDING.append((t, (int(x), int(y_bottom - t.height))))
+        x += t.width + gap
 
 def pixelate(im, f=4, colors=40):
     small = im.resize((W // f, H // f), Image.BOX).quantize(colors=colors, method=Image.Quantize.MEDIANCUT).convert('RGB')
@@ -75,6 +82,9 @@ def pixelate(im, f=4, colors=40):
 
 def save(im, name):
     im = pixelate(im)
+    for t, pos in PENDING:
+        im.paste(t, pos, t)
+    PENDING.clear()
     im.save(ROOT / 'assets' / f'{name}.webp', 'WEBP', quality=86)
     if name == 'cover_index':
         im.resize((1200, 630), Image.LANCZOS).save(ROOT / 'assets/og/index.webp', 'WEBP', quality=82)
