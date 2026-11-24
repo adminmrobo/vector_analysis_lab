@@ -1,0 +1,33 @@
+{
+ "title": "벡터 분석 랩 0편 — 네 개의 자, 하루의 첫 수업",
+ "number": "01",
+ "series": "벡터 분석 랩 — 네 개의 자로 읽는 화살표",
+ "date": "2026-11-24",
+ "version": "1.1",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "about": [
+  "lab:concept/norm",
+  "lab:concept/vector-2d",
+  "lab:concept/gradient",
+  "lab:concept/curl",
+  "lab:concept/dashboards"
+ ],
+ "basedOn": [],
+ "educationalLevel": "입문~중급",
+ "license": "",
+ "url": "https://adminmrobo.github.io/vector_analysis_lab/00_orientation.html",
+ "registry": "KG_00_registry 0.3",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 벡터 분석 랩 0편 — 네 개의 자, 하루의 첫 수업. 벡터 분석 랩 — 네 개의 자로 읽는 화살표, v1.1."
+}

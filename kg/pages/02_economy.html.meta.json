@@ -1,0 +1,33 @@
+{
+ "title": "벡터 분석 랩 2부 — 경기시계·차익거래·자금순환·집값·상관",
+ "number": "03",
+ "series": "벡터 분석 랩 — 네 개의 자로 읽는 화살표",
+ "date": "2026-11-24",
+ "version": "1.1",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "about": [
+  "lab:concept/curl",
+  "lab:concept/laplacian",
+  "lab:concept/vector-2d",
+  "lab:concept/dashboards",
+  "lab:concept/divergence"
+ ],
+ "basedOn": [],
+ "educationalLevel": "입문~중급",
+ "license": "",
+ "url": "https://adminmrobo.github.io/vector_analysis_lab/02_economy.html",
+ "registry": "KG_00_registry 0.3",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 벡터 분석 랩 2부 — 경기시계·차익거래·자금순환·집값·상관. 벡터 분석 랩 — 네 개의 자로 읽는 화살표, v1.1."
+}

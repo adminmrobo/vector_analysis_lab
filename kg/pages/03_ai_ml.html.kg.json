@@ -1,0 +1,554 @@
+{
+ "version": "1.0",
+ "page": "03_ai_ml",
+ "nodes": [
+  {
+   "id": "lab:concept/norm",
+   "type": "Concept",
+   "label": {
+    "ko": "길이(노름)",
+    "en": "Norm"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-14",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "피타고라스로 잰 화살표 길이"
+   }
+  },
+  {
+   "id": "lab:concept/vector-2d",
+   "type": "Concept",
+   "label": {
+    "ko": "화살표(벡터)",
+    "en": "Vector"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#opening",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "geom",
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "자리가 아닌 이동. 같은 자리끼리 더한다."
+   }
+  },
+  {
+   "id": "lab:concept/gradient",
+   "type": "Concept",
+   "label": {
+    "ko": "기울기",
+    "en": "gradient"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-16",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai",
+    "dl"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다."
+   }
+  },
+  {
+   "id": "lab:concept/embedding",
+   "type": "Concept",
+   "label": {
+    "ko": "임베딩",
+    "en": "embedding"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-14",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data",
+    "geom",
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "그림·글을 의미가 담긴 짧은 숫자 묶음으로 바꾼 것."
+   }
+  },
+  {
+   "id": "lab:concept/laplacian",
+   "type": "Concept",
+   "label": {
+    "ko": "라플라시안",
+    "en": "Laplacian"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-18",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "2차 편미분의 합 = 헤시안 고유값의 합 = ∇·∇f."
+   }
+  },
+  {
+   "id": "lab:concept/dashboards",
+   "type": "Concept",
+   "label": {
+    "ko": "대시보드",
+    "en": "Dashboards"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-16",
+   "level": 1,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "data"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24"
+  },
+  {
+   "id": "lab:concept/curl",
+   "type": "Concept",
+   "label": {
+    "ko": "회전",
+    "en": "Curl"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-15",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "∇×F. 작은 바람개비가 가장 빨리 도는 축과 세기(빠르기의 두 배)."
+   }
+  },
+  {
+   "id": "lab:concept/learning-rate",
+   "type": "Term",
+   "label": {
+    "ko": "학습률",
+    "en": "Learning rate"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-16",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai",
+    "dl"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "새 나무의 예측을 반영하는 배수."
+   }
+  },
+  {
+   "id": "lab:concept/vector",
+   "type": "Concept",
+   "label": {
+    "ko": "벡터",
+    "en": "Vector"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-14",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "dl"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "숫자 한 줄. 데이터 한 행, 가중치, 임베딩"
+   }
+  },
+  {
+   "id": "lab:term/dot-product",
+   "type": "Term",
+   "label": {
+    "ko": "내적",
+    "en": "dot product"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-14",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "같은 자리끼리 곱해 더한 값."
+   }
+  },
+  {
+   "id": "lab:concept/euclid-distance",
+   "type": "Term",
+   "label": {
+    "ko": "두 점 사이 거리",
+    "en": "Euclidean distance"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-14",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "mentioned",
+   "domain": [
+    "math",
+    "data",
+    "geom"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "피타고라스 정리로 재는 두 숫자 줄 사이 거리"
+   }
+  },
+  {
+   "id": "lab:concept/cosine-similarity",
+   "type": "Concept",
+   "label": {
+    "ko": "코사인 유사도",
+    "en": "cosine similarity"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#room-14",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "mentioned",
+   "domain": [
+    "data",
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "두 벡터가 이루는 각도의 코사인. −1(반대)~1(같은 방향) 값을 가지며 벡터의 길이는 무시한다."
+   }
+  },
+  {
+   "id": "lab:topic/normed-spaces",
+   "type": "Topic",
+   "label": {
+    "ko": "노름공간과 거리",
+    "en": "Normed spaces and metrics"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/vectors-geometry",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터와 내적의 기하",
+    "en": "Vectors and the geometry of inner products"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "geom"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/calculus-optimization-math",
+   "type": "Topic",
+   "label": {
+    "ko": "미적분과 최적화 수학",
+    "en": "Calculus for optimization"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "ai"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/embedding-space",
+   "type": "Topic",
+   "label": {
+    "ko": "임베딩 공간",
+    "en": "Embedding space"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "ai"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/dashboards",
+   "type": "Topic",
+   "label": {
+    "ko": "대시보드",
+    "en": "Dashboards"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/gradient-descent",
+   "type": "Topic",
+   "label": {
+    "ko": "경사하강법",
+    "en": "Gradient descent"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "ai"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/vector-spaces",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터공간",
+    "en": "Vector spaces"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/inner-product-orthogonality",
+   "type": "Topic",
+   "label": {
+    "ko": "내적과 직교",
+    "en": "Inner products and orthogonality"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/distance-angle",
+   "type": "Topic",
+   "label": {
+    "ko": "거리와 각",
+    "en": "Distance and angle"
+   },
+   "page": "03_ai_ml",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "geom"
+   ],
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/norm",
+   "p": "lab:broader",
+   "o": "lab:topic/normed-spaces",
+   "anchor": "#room-14",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector-2d",
+   "p": "lab:broader",
+   "o": "lab:topic/vectors-geometry",
+   "anchor": "#opening",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/gradient",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#room-16",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/embedding",
+   "p": "lab:broader",
+   "o": "lab:topic/embedding-space",
+   "anchor": "#room-14",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/laplacian",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#room-18",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/dashboards",
+   "p": "lab:broader",
+   "o": "lab:topic/dashboards",
+   "anchor": "#room-16",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/curl",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#room-15",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/learning-rate",
+   "p": "lab:broader",
+   "o": "lab:topic/gradient-descent",
+   "anchor": "#room-16",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector",
+   "p": "lab:broader",
+   "o": "lab:topic/vector-spaces",
+   "anchor": "#room-14",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:term/dot-product",
+   "p": "lab:broader",
+   "o": "lab:topic/inner-product-orthogonality",
+   "anchor": "#room-14",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/euclid-distance",
+   "p": "lab:broader",
+   "o": "lab:topic/distance-angle",
+   "anchor": "#room-14",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/cosine-similarity",
+   "p": "lab:broader",
+   "o": "lab:topic/embedding-space",
+   "anchor": "#room-14",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector",
+   "p": "lab:hasPart",
+   "o": "lab:concept/norm",
+   "anchor": "#room-14",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/gradient",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/laplacian",
+   "anchor": "#room-16",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/curl",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/laplacian",
+   "anchor": "#room-15",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "version": "1.0",
+ "page": "dash_02",
+ "nodes": [
+  {
+   "id": "lab:concept/dashboards",
+   "type": "Concept",
+   "label": {
+    "ko": "대시보드",
+    "en": "Dashboards"
+   },
+   "page": "dash_02",
+   "anchor": "#townm3",
+   "level": 1,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "data"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24"
+  },
+  {
+   "id": "lab:concept/curl",
+   "type": "Concept",
+   "label": {
+    "ko": "회전",
+    "en": "Curl"
+   },
+   "page": "dash_02",
+   "anchor": "#fxm2",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "∇×F. 작은 바람개비가 가장 빨리 도는 축과 세기(빠르기의 두 배)."
+   }
+  },
+  {
+   "id": "lab:concept/vector",
+   "type": "Concept",
+   "label": {
+    "ko": "벡터",
+    "en": "Vector"
+   },
+   "page": "dash_02",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "mentioned",
+   "domain": [
+    "math",
+    "dl"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "숫자 한 줄. 데이터 한 행, 가중치, 임베딩"
+   }
+  },
+  {
+   "id": "lab:topic/dashboards",
+   "type": "Topic",
+   "label": {
+    "ko": "대시보드",
+    "en": "Dashboards"
+   },
+   "page": "dash_02",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/calculus-optimization-math",
+   "type": "Topic",
+   "label": {
+    "ko": "미적분과 최적화 수학",
+    "en": "Calculus for optimization"
+   },
+   "page": "dash_02",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "ai"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/vector-spaces",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터공간",
+    "en": "Vector spaces"
+   },
+   "page": "dash_02",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/dashboards",
+   "p": "lab:broader",
+   "o": "lab:topic/dashboards",
+   "anchor": "#townm3",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/curl",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#fxm2",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector",
+   "p": "lab:broader",
+   "o": "lab:topic/vector-spaces",
+   "anchor": "#kg",
+   "confidence": "medium"
+  }
+ ]
+}

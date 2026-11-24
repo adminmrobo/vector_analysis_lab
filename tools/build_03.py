@@ -362,3 +362,15 @@ if __name__ == '__main__':
              '원자료 카드 네 장의 각도·구면 방향·회전·1/r·dV·라플라시안이 AI 모델 안에서 하는 일. 마지막은 박사 vs 하루 "이 문제엔 어느 자?" 대결.',
              'assets/og/03.webp', b, PAGE_JS, PACK_DATA, ['주기 특성', '임베딩', 'RoPE', '학습 속도', '흐름 모델', 'GNN'])
     print('03 bytes', n)
+
+
+# ── 지식 색인 다시 덧붙이기 (kg/pages/, ai-lab-retrofit autokg) ──
+# 빌드가 페이지를 다시 쓰면 덧붙인 #kg가 사라지므로 빌드 끝에서 다시 덧붙인다. kg/reapply.py가 없으면 아무것도 하지 않는다.
+if __name__ == "__main__":
+    import os as _os, sys as _sys, subprocess as _sp
+    _r = _os.path.dirname(_os.path.abspath(__file__))
+    for _i in range(3):
+        if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")): break
+        _r = _os.path.dirname(_r)
+    if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")):
+        _sp.run([_sys.executable, _os.path.join(_r, "kg", "reapply.py"), _r])

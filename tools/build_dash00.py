@@ -193,3 +193,15 @@ if __name__ == '__main__':
              '함수와 화살표 밭을 고르고 점과 자를 바꿔, 기울기·발산·회전·라플라시안이 세 자에서 같은 값인지 직접 확인하는 복습 대시보드.',
              'assets/og/00.webp', body(), PAGE_JS, PACK_DATA, ['좌표계', '축척 인자', '기울기', '발산', '회전', '라플라시안'])
     print('dash00 bytes', n)
+
+
+# ── 지식 색인 다시 덧붙이기 (kg/pages/, ai-lab-retrofit autokg) ──
+# 빌드가 페이지를 다시 쓰면 덧붙인 #kg가 사라지므로 빌드 끝에서 다시 덧붙인다. kg/reapply.py가 없으면 아무것도 하지 않는다.
+if __name__ == "__main__":
+    import os as _os, sys as _sys, subprocess as _sp
+    _r = _os.path.dirname(_os.path.abspath(__file__))
+    for _i in range(3):
+        if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")): break
+        _r = _os.path.dirname(_r)
+    if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")):
+        _sp.run([_sys.executable, _os.path.join(_r, "kg", "reapply.py"), _r])

@@ -148,3 +148,15 @@ if __name__ == '__main__':
              '판매 예측·단어 나침반·학습 걸음·확률과 관계망 네 실험에서 주기 특성, 코사인, RoPE, 1/r² 걸음, 밀도 고치기, GNN 섞기를 직접 돌려 봅니다. 미션 12개.',
              'assets/og/03.webp', body(), PAGE_JS, PACK_DATA, ['주기 특성', '임베딩', 'RoPE', '학습 속도', '흐름 모델', 'GNN'])
     print('dash03 bytes', n)
+
+
+# ── 지식 색인 다시 덧붙이기 (kg/pages/, ai-lab-retrofit autokg) ──
+# 빌드가 페이지를 다시 쓰면 덧붙인 #kg가 사라지므로 빌드 끝에서 다시 덧붙인다. kg/reapply.py가 없으면 아무것도 하지 않는다.
+if __name__ == "__main__":
+    import os as _os, sys as _sys, subprocess as _sp
+    _r = _os.path.dirname(_os.path.abspath(__file__))
+    for _i in range(3):
+        if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")): break
+        _r = _os.path.dirname(_r)
+    if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")):
+        _sp.run([_sys.executable, _os.path.join(_r, "kg", "reapply.py"), _r])

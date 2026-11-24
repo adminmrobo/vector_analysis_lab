@@ -292,3 +292,15 @@ if __name__ == '__main__':
              '1부 생활 장면을 경제·금융으로: 경기순환시계(원통 자), 차익거래(회전), 자금순환(발산), 집값 파급(라플라시안), 상관(구면 자).',
              'assets/og/02.webp', b, PAGE_JS, PACK_DATA, ['경기순환', '차익거래', '자금순환', '확산', '상관'])
     print('02 bytes', n)
+
+
+# ── 지식 색인 다시 덧붙이기 (kg/pages/, ai-lab-retrofit autokg) ──
+# 빌드가 페이지를 다시 쓰면 덧붙인 #kg가 사라지므로 빌드 끝에서 다시 덧붙인다. kg/reapply.py가 없으면 아무것도 하지 않는다.
+if __name__ == "__main__":
+    import os as _os, sys as _sys, subprocess as _sp
+    _r = _os.path.dirname(_os.path.abspath(__file__))
+    for _i in range(3):
+        if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")): break
+        _r = _os.path.dirname(_r)
+    if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")):
+        _sp.run([_sys.executable, _os.path.join(_r, "kg", "reapply.py"), _r])

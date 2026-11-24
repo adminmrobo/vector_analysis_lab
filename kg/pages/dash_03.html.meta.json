@@ -1,0 +1,33 @@
+{
+ "title": "벡터 분석 랩 3부 대시보드 — AI 실험실",
+ "number": "08",
+ "series": "벡터 분석 랩 — 네 개의 자로 읽는 화살표",
+ "date": "2026-11-24",
+ "version": "1.1",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "about": [
+  "lab:concept/norm",
+  "lab:concept/learning-rate",
+  "lab:concept/dashboards",
+  "lab:concept/vector-2d",
+  "lab:concept/vector"
+ ],
+ "basedOn": [],
+ "educationalLevel": "입문~중급",
+ "license": "",
+ "url": "https://adminmrobo.github.io/vector_analysis_lab/dash_03.html",
+ "registry": "KG_00_registry 0.3",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 벡터 분석 랩 3부 대시보드 — AI 실험실. 벡터 분석 랩 — 네 개의 자로 읽는 화살표, v1.1."
+}

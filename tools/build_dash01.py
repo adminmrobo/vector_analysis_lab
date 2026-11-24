@@ -229,3 +229,15 @@ if __name__ == '__main__':
              '피자 가게·지구 배송센터·역과 환전소·사진 앱 네 현장에서 한 걸음 h, 면적 요소, 발산, 회전, 라플라시안을 직접 운영하며 복습합니다. 미션 12개.',
              'assets/og/01.webp', body(), PAGE_JS, PACK_DATA, ['축척 인자', '면적 요소', '발산', '회전', '라플라시안'])
     print('dash01 bytes', n)
+
+
+# ── 지식 색인 다시 덧붙이기 (kg/pages/, ai-lab-retrofit autokg) ──
+# 빌드가 페이지를 다시 쓰면 덧붙인 #kg가 사라지므로 빌드 끝에서 다시 덧붙인다. kg/reapply.py가 없으면 아무것도 하지 않는다.
+if __name__ == "__main__":
+    import os as _os, sys as _sys, subprocess as _sp
+    _r = _os.path.dirname(_os.path.abspath(__file__))
+    for _i in range(3):
+        if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")): break
+        _r = _os.path.dirname(_r)
+    if _os.path.exists(_os.path.join(_r, "kg", "reapply.py")):
+        _sp.run([_sys.executable, _os.path.join(_r, "kg", "reapply.py"), _r])

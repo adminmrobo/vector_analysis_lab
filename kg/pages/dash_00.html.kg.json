@@ -1,0 +1,502 @@
+{
+ "version": "1.0",
+ "page": "dash_00",
+ "nodes": [
+  {
+   "id": "lab:concept/dashboards",
+   "type": "Concept",
+   "label": {
+    "ko": "대시보드",
+    "en": "Dashboards"
+   },
+   "page": "dash_00",
+   "anchor": "#mSum",
+   "level": 1,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "data"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24"
+  },
+  {
+   "id": "lab:concept/laplacian",
+   "type": "Concept",
+   "label": {
+    "ko": "라플라시안",
+    "en": "Laplacian"
+   },
+   "page": "dash_00",
+   "anchor": "#m2",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "2차 편미분의 합 = 헤시안 고유값의 합 = ∇·∇f."
+   }
+  },
+  {
+   "id": "lab:concept/coordinate-system",
+   "type": "Concept",
+   "label": {
+    "ko": "좌표계",
+    "en": "Coordinate system"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "geom",
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "자리를 숫자로 적는 약속: 기준점·방향·눈금."
+   }
+  },
+  {
+   "id": "lab:concept/gradient",
+   "type": "Concept",
+   "label": {
+    "ko": "기울기",
+    "en": "gradient"
+   },
+   "page": "dash_00",
+   "anchor": "#outro",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai",
+    "dl"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다."
+   }
+  },
+  {
+   "id": "lab:concept/norm",
+   "type": "Concept",
+   "label": {
+    "ko": "길이(노름)",
+    "en": "Norm"
+   },
+   "page": "dash_00",
+   "anchor": "#dScore",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "피타고라스로 잰 화살표 길이"
+   }
+  },
+  {
+   "id": "lab:concept/divergence",
+   "type": "Concept",
+   "label": {
+    "ko": "발산",
+    "en": "Divergence"
+   },
+   "page": "dash_00",
+   "anchor": "#outro",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "∇·F. 한 점에서 나가는 양과 들어오는 양의 차. 양수면 샘, 음수면 빨아들이는 곳."
+   }
+  },
+  {
+   "id": "lab:concept/vector-field",
+   "type": "Concept",
+   "label": {
+    "ko": "화살표 밭(벡터장)",
+    "en": "Vector field"
+   },
+   "page": "dash_00",
+   "anchor": "#board",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "공간의 점마다 화살표 하나가 붙은 것. 바람, 물 흐름."
+   }
+  },
+  {
+   "id": "lab:concept/curl",
+   "type": "Concept",
+   "label": {
+    "ko": "회전",
+    "en": "Curl"
+   },
+   "page": "dash_00",
+   "anchor": "#outro",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "∇×F. 작은 바람개비가 가장 빨리 도는 축과 세기(빠르기의 두 배)."
+   }
+  },
+  {
+   "id": "lab:concept/vector",
+   "type": "Concept",
+   "label": {
+    "ko": "벡터",
+    "en": "Vector"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "mentioned",
+   "domain": [
+    "math",
+    "dl"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "숫자 한 줄. 데이터 한 행, 가중치, 임베딩"
+   }
+  },
+  {
+   "id": "lab:concept/vector-2d",
+   "type": "Concept",
+   "label": {
+    "ko": "화살표(벡터)",
+    "en": "Vector"
+   },
+   "page": "dash_00",
+   "anchor": "#board",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "mentioned",
+   "domain": [
+    "geom",
+    "math"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "자리가 아닌 이동. 같은 자리끼리 더한다."
+   }
+  },
+  {
+   "id": "lab:topic/dashboards",
+   "type": "Topic",
+   "label": {
+    "ko": "대시보드",
+    "en": "Dashboards"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/calculus-optimization-math",
+   "type": "Topic",
+   "label": {
+    "ko": "미적분과 최적화 수학",
+    "en": "Calculus for optimization"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "ai"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/coordinates",
+   "type": "Topic",
+   "label": {
+    "ko": "좌표계",
+    "en": "Coordinate systems"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "geom"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/normed-spaces",
+   "type": "Topic",
+   "label": {
+    "ko": "노름공간과 거리",
+    "en": "Normed spaces and metrics"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/divergence-curl",
+   "type": "Topic",
+   "label": {
+    "ko": "발산과 회전",
+    "en": "Divergence and curl"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/vector-spaces",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터공간",
+    "en": "Vector spaces"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "math"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/vectors-geometry",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터와 내적의 기하",
+    "en": "Vectors and the geometry of inner products"
+   },
+   "page": "dash_00",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "geom"
+   ],
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/dashboards",
+   "p": "lab:broader",
+   "o": "lab:topic/dashboards",
+   "anchor": "#mSum",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/laplacian",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#m2",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/coordinate-system",
+   "p": "lab:broader",
+   "o": "lab:topic/coordinates",
+   "anchor": "#kg",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/gradient",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#outro",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/norm",
+   "p": "lab:broader",
+   "o": "lab:topic/normed-spaces",
+   "anchor": "#dScore",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/divergence",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#outro",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector-field",
+   "p": "lab:broader",
+   "o": "lab:topic/divergence-curl",
+   "anchor": "#board",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/curl",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#outro",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector",
+   "p": "lab:broader",
+   "o": "lab:topic/vector-spaces",
+   "anchor": "#kg",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector-2d",
+   "p": "lab:broader",
+   "o": "lab:topic/vectors-geometry",
+   "anchor": "#board",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/vector",
+   "p": "lab:hasPart",
+   "o": "lab:concept/norm",
+   "anchor": "#kg",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/laplacian",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/divergence",
+   "anchor": "#m2",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/gradient",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/divergence",
+   "anchor": "#outro",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/divergence",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/curl",
+   "anchor": "#outro",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/gradient",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/laplacian",
+   "anchor": "#outro",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/divergence",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/laplacian",
+   "anchor": "#outro",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/divergence",
+   "p": "lab:evaluatedOn",
+   "o": "lab:concept/vector-field",
+   "anchor": "#outro",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/curl",
+   "p": "lab:evaluatedOn",
+   "o": "lab:concept/vector-field",
+   "anchor": "#outro",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  },
+  {
+   "s": "lab:concept/curl",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/laplacian",
+   "anchor": "#outro",
+   "confidence": "medium",
+   "note": "다른 해설 페이지에서 확인된 관계"
+  }
+ ]
+}

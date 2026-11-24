@@ -1,0 +1,33 @@
+{
+ "title": "벡터 분석 랩 3부 — 달력 특성·임베딩·RoPE·학습 걸음·흐름 모델·GNN",
+ "number": "04",
+ "series": "벡터 분석 랩 — 네 개의 자로 읽는 화살표",
+ "date": "2026-11-24",
+ "version": "1.1",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "about": [
+  "lab:concept/norm",
+  "lab:concept/vector-2d",
+  "lab:concept/gradient",
+  "lab:concept/embedding",
+  "lab:concept/laplacian"
+ ],
+ "basedOn": [],
+ "educationalLevel": "입문~중급",
+ "license": "",
+ "url": "https://adminmrobo.github.io/vector_analysis_lab/03_ai_ml.html",
+ "registry": "KG_00_registry 0.3",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 벡터 분석 랩 3부 — 달력 특성·임베딩·RoPE·학습 걸음·흐름 모델·GNN. 벡터 분석 랩 — 네 개의 자로 읽는 화살표, v1.1."
+}
